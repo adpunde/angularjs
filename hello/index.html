@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MyFirstController">
+			<h1>Welcome to AngularJS</h1>
+			{{message}}
+			<br />
+			{{greet()}}
+			<br />
+			<input type="text"
+			 ng-model="name"
+			 ng-keyup="keyup();">
+			<div>
+				Total numeric value of name {{name}} is: {{value}}
+				<br />
+				Total length of name {{name}} is: {{length}}
+			</div>
+		</div>
+	</body>
+</html>

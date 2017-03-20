@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="filterApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="FilterController">
+			<h1>AngularJS Filter</h1>
+
+			<input type="text"
+			 ng-model="name"
+			 ng-blur="upper();">
+
+	</body>
+</html>
