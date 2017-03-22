@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="digestApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="DigestController">
+			<h1>Digest</h1>
+			<button ng-click="showNumberOfWatchers()">Click</button>
+			<p>No of watchers {{num_watchers}}</p>
+			<button ng-click="countOnce()">Increment Counter</button>
+			<br />
+			<button ng-click="autoCounter()">Auto Increment Counter</button>
+			Counter {{ counter }}
+		</div>
+	</body>
+</html>
