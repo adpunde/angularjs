@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="loopApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+		<script src="prototypal.js"></script>
+	</head>
+	<body>
+		<div ng-controller="LoopController">
+			<h1>Food items</h1>
+			<input type="text" ng-model="search">
+			<ul>
+				<li ng-repeat="item in foodItems | filter : search">
+					Index {{$index}} : {{ item }}
+				</li>
+			</ul>
+		</div>
+		<div ng-controller="ParentCtrl">
+			<div ng-controller="ChildCtrl">
+			</div>
+		</div>
+		<div ng-controller="ParentCtrl2 as parent">
+			Parent value: {{ parent.value }}
+			<div ng-controller="ChildCtrl2 as child">
+				Child value: {{ child.value }}
+				<br />
+				Parent common: {{ parent.common }}
+			</div>
+		</div>
+	</body>
+</html>
