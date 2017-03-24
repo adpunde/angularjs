@@ -7,15 +7,6 @@
 		<script src="prototypal.js"></script>
 	</head>
 	<body>
-		<div ng-controller="LoopController">
-			<h1>Food items</h1>
-			<input type="text" ng-model="search">
-			<ul>
-				<li ng-repeat="item in foodItems | filter : search">
-					Index {{$index}} : {{ item }}
-				</li>
-			</ul>
-		</div>
 		<div ng-controller="ParentCtrl">
 			<div ng-controller="ChildCtrl">
 			</div>

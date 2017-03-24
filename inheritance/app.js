@@ -7,7 +7,6 @@ var foodItems = [
 ];
 
 angular.module('loopApp', [])
-.controller('LoopController', LoopController)
 .controller('ParentCtrl', ParentController)
 .controller('ChildCtrl', ChildController)
 .controller('ParentCtrl2', ParentController2)
