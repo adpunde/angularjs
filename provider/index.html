@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="serviceApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div ng-controller="ShowController as show">
+			<h1>Sweets</h1>
+			<ul>
+				<li ng-repeat="item in show.sweets">
+					{{ item }}
+				</li>
+			</ul>
+		</div>
+		<div ng-controller="AddController as add">
+			<input type="text" ng-model="add.sweet" placeholder="Name of Sweet">
+			<button ng-click="add.addSweet()">Add Sweet</button>
+			<br />
+			<input type="text" ng-model="add.remove" placeholder="Name of Sweet">
+			<button ng-click="add.removeSweet()">Remove Sweet</button>
+<!--			<div ng-if="add.errorMessage" class="error">
+				Error: {{add.errorMessage}}
+			</div> -->
+			<div ng-show="add.errorMessage" class="error">
+				Error: {{add.errorMessage}}
+			</div>
+<!--			<div ng-hide="!add.errorMessage" class="error">
+				Error: {{add.errorMessage}}
+			</div> -->
+		</div>
+	</body>
+</html>
