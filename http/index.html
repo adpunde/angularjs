@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="httpApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MenuController as menu">
+			<h2>Menu</h2>
+			<ul>
+				<li ng-repeat="item in menu.categories">
+					<a href="" ng-click="menu.getMenuItems(item.short_name);">
+                        {{ item.short_name }}
+                    </a>
+                    {{item.name}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
