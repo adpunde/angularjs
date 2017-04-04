@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<ol>
+    <li ng-repeat="item in add.allsweets">
+        {{item}}
+        <button ng-click="add.removeSweet($index);">Delete</button>
+    </li>
+</ol>
