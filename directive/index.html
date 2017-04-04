@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="directiveApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="AddController as add">
+			<h1>Sweets</h1>
+			<ul>
+				<list-item ng-repeat="item in add.allsweets" />
+			</ul>
+			<input type="text" ng-model="add.sweet" placeholder="Name of Sweet">
+			<button ng-click="add.addSweet()">Add Sweet</button>
+		</div>
+		<div ng-controller="AddController2 as add">
+			<h1>Sweets2</h1>
+			<ul>
+				<list-item ng-repeat="item in add.allsweets" />
+			</ul>
+			<input type="text" ng-model="add.sweet" placeholder="Name of Sweet">
+			<button ng-click="add.addSweet()">Add Sweet</button>
+		</div>
+	</body>
+</html>
