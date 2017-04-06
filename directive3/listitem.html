@@ -1,0 +1,8 @@
+<h1>{{ctrl.title}}</h1>
+<ol>
+    <li ng-repeat="item in ctrl.items">
+        {{item}}
+        <!--<button ng-click="add.removeSweet($index);">Delete</button> -->
+    </li>
+</ol>
+<div ng-if="ctrl.barfiInList()">WARNING: Barfi detected !</div>
