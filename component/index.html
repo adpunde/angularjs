@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="componentApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/jquery-3.1.1.min.js"></script>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<script src="app.js"></script>
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div ng-controller="ListController as list1">
+			<list-sweets
+				items="list1.allsweets"
+				my-title="Sweet1"
+				on-remove="list1.removeItem(index)">
+			</list-sweets>
+
+			<input type="text" ng-model="list1.sweet" placeholder="Name of Sweet">
+			<button ng-click="list1.addSweet()">Add Sweet</button>
+			<br />
+			<span>{{ list1.lastRemoved }}</span>
+		</div>
+	</body>
+</html>
