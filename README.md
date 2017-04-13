@@ -13,3 +13,13 @@ Here is the sequence of modules:
 7. inheritance
 8. service
 9. factory
+10. provider
+11. promise
+12. http
+13. directive
+14. directive2
+15. directive3
+16. directiveapi
+17. link
+18. transclude
+19. component
