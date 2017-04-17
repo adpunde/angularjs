@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="ListApp">
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div ng-controller="ListController as list1">
+			<list-sweets
+				items="list1.allsweets"
+				my-title="Sweet1"
+				on-remove="list1.removeItem(index)">
+			</list-sweets>
+
+			<input type="text" ng-model="list1.sweet" placeholder="Name of Sweet">
+			<button ng-click="list1.addSweet()">Add Sweet</button>
+			<br />
+			<span>{{ list1.lastRemoved }}</span>
+		</div>
+
+		<spinner></spinner>
+
+		<script src="lib/jquery-3.1.1.min.js"></script>
+		<script src="lib/angular.js"></script>
+
+		<script src="src/list/list.module.js"></script>
+		<script src="src/spinner/spinner.module.js"></script>
+
+		<script src="src/list/list.controller.js"></script>
+		<script src="src/list/list.component.js"></script>
+		<script src="src/list/list.barfifilter.service.js"></script>
+		<script src="src/list/list.factory.js"></script>
+
+		<script src="src/spinner/spinner.component.js"></script>
+
+	</body>
+</html>
