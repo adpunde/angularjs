@@ -30,3 +30,4 @@ Here is the sequence of modules:
 24. routing-resolve
 25. routing-param
 26. routing-child
+27. form

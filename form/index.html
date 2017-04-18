@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="FormApp">
+	<head>
+		<title>AngularJS</title>
+		<script src="http://127.0.0.1/jquery-3.1.1.min.js"></script>
+		<script src="http://127.0.0.1/angular.js"></script>
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body ng-controller="RegistrationController as reg">
+		<h1>Form Validation</h1>
+
+		<fieldset>
+			<legend>Registration</legend>
+			<form name="regForm" novalidate>
+				<input type="text" name="username" placeholder="Pick a username"
+					ng-model="reg.user.username"
+					required
+					ng-minlength="4"
+					ng-maxlength="10">
+					{{reg.user.username}}
+					<span ng-if="(regForm.username.$error.minlength ||
+						regForm.username.$error.required) &&
+						regForm.username.$touched">
+						Username must be 4 characters long
+					</span>
+					<span ng-if="regForm.username.$error.maxlength &&
+						regForm.username.$touched">
+						Username must not be longer than 10 characters
+					</span>
+					<br />
+
+				<input type="email" name="email" placeholder="Email"
+					ng-model="reg.user.email"
+					required>
+					<br />
+
+				<input type="text" name="phone" placeholder="Phone"
+						ng-model="reg.user.phone"
+						pattern="(\d{5}-\d{5})">
+					<span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+						Phone must be in the format XXXXX-XXXXX.
+					</span>
+					<br />
+
+				<button ng-disabled="regForm.$invalid"
+				ng-click="reg.submit()">Submit
+				</button>
+
+				<div>Form valid ? {{regForm.$valid}}</div>
+			</form>
+		</fieldset>
+
+		<div id="info" ng-if="reg.completed">
+			Username: {{reg.user.username}} <br />
+			Email: {{reg.user.email}} <br />
+			Phone: {{reg.user.phone}}
+		</div>
+
+		<script src="src/app.js"></script>
+	</body>
+</html>
