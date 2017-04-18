@@ -23,3 +23,10 @@ Here is the sequence of modules:
 17. link
 18. transclude
 19. component
+20. event
+21. module
+22. routing
+23. routing-controller
+24. routing-resolve
+25. routing-param
+26. routing-child
