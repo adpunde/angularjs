@@ -15,6 +15,17 @@ function routeConfig($stateProvider) {
         url: '/',
         templateUrl: 'src/public/public.home.html'
     })
+    .state('public.menu', {
+        url: '/menu',
+        templateUrl: 'src/public/menu.html',
+        controller: 'MenuController',
+        controllerAs: 'menuCtrl',
+        resolve: {
+            menuCategories: ['MenuService', function(MenuService) {
+                return MenuService.getCategories();
+            }]
+        }
+    })
 }
 
 })();
