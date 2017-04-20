@@ -1,6 +1,6 @@
 (function() {
 'use strict';
 
-angular.module('restaurant', ['ui.router']);
+angular.module('restaurant', ['public']);
 
 })();

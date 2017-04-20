@@ -12,6 +12,9 @@
 		<link href="css/restaurant.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body ng-app="restaurant" ng-strict-di>
+
+		<spinner class="spinner"></spinner>
+
 		<header-component></header-component>
 
 		<div id="call-btn" class="visible-xs">
@@ -36,8 +39,17 @@
 		<script src="http://127.0.0.1/angular-ui-router.js"></script>
 
 		<script src="src/restaurant.module.js"></script>
+		<script src="src/restaurant.routes.js"></script>
 		<script src="src/header.component.js"></script>
 		<script src="src/footer.component.js"></script>
 
+		<script src="src/public/public.module.js"></script>
+		<script src="src/public/public.routes.js"></script>
+
+		<script src="src/spinner/spinner.module.js"></script>
+		<script src="src/spinner/spinner.component.js"></script>
+
+		<script src="src/common/common.module.js"></script>
+		<script src="src/common/common.interceptor.js"></script>
 	</body>
 </html>
