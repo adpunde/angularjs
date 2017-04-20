@@ -14,7 +14,21 @@
 	<body ng-app="restaurant" ng-strict-di>
 		<header-component></header-component>
 
-		<!-- <ui-view></ui-view> -->
+		<div id="call-btn" class="visible-xs">
+			<a class="btn" href="tel:410-602-5008">
+				<span class="glyphicon glyphicon-earphone"></span>
+				410-602-5008
+			</a>
+		</div>
+		<div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+		<ui-view>
+			<div class="text-center initial-loading">
+				<h2>Loading Site...</h2>
+			</div>
+		</ui-view>
+
+		<footer-component></footer-component>
 
 		<script src="http://127.0.0.1/jquery-3.1.1.min.js"></script>
 		<script src="http://127.0.0.1/bootstrap.js"></script>
@@ -23,6 +37,7 @@
 
 		<script src="src/restaurant.module.js"></script>
 		<script src="src/header.component.js"></script>
+		<script src="src/footer.component.js"></script>
 
 	</body>
 </html>
