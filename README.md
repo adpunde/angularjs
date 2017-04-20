@@ -2,6 +2,7 @@
 Angular JS
 
 The code is based on a Coursera course lectures by Prof. Yaakov.
+It contains various modules and a restaurant app.
 
 Here is the sequence of modules:
 1. hello
@@ -31,3 +32,5 @@ Here is the sequence of modules:
 25. routing-param
 26. routing-child
 27. form
+
+restaurant app
