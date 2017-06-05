@@ -1,0 +1,33 @@
+<div id="UserMenu" class="container">
+    <div ng-if="ctrl.user !== null">
+        <div class="row well well-sm">
+            <div class="col-sm-4"> First Name </div>
+            <div class="col-sm-8"> {{ ctrl.user.firstname }} </div>
+            <div class="col-sm-4"> Last Name </div>
+            <div class="col-sm-8"> {{ ctrl.user.lastname }} </div>
+            <div class="col-sm-4"> Email </div>
+            <div class="col-sm-8"> {{ ctrl.user.email }} </div>
+            <div class="col-sm-4"> Phone </div>
+            <div class="col-sm-8"> {{ ctrl.user.phone }} </div>
+            <div class="col-sm-4"> Favourite Menu </div>
+            <div class="col-sm-8"> {{ ctrl.user.menu }} </div>
+        </div>
+        <div class="row well well-sm">
+            <div class="photo col-sm-6">
+                <img class="img-responsive" width="250" height="150"
+                 ng-src="{{ctrl.basePath}}/images/{{ctrl.user.menu}}.jpg"
+                 alt="{{ctrl.user.menuData.name}}">
+            </div>
+            <div class="col-sm-6">
+                {{ ctrl.user.menuData.name }}
+                <p id="userMenuDescription">
+                    {{ ctrl.user.menuData.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="ctrl.user === null">
+        Not Signed Up Yet.
+        <a href="#" ui-sref="public.signup"> Sign up Now !</a>
+    </div>
+</div>
